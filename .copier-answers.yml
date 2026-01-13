@@ -1,0 +1,16 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v4.5.1
+_src_path: https://github.com/jupyterlab/extension-template
+author_email: connor@structuralpython.com
+author_name: nbname
+has_ai_rules: false
+has_binder: false
+has_settings: false
+kind: frontend
+labextension_name: nbname
+project_short_description: A JupyterLab extension that passes the relative path of
+    the current notebook to the kernel to allow for notebook automation.
+python_name: nbname
+repository: https://github.com/structuralpython/nbname
+test: false
+
