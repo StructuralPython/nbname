@@ -13,7 +13,7 @@ A JupyterLab extension that passes the relative path of the current notebook to 
 To install the extension, execute:
 
 ```bash
-pip install nbname
+uv pip install git+https://github.com/StructuralPython/nbname.git
 ```
 
 ## Uninstall
@@ -21,7 +21,7 @@ pip install nbname
 To remove the extension, execute:
 
 ```bash
-pip uninstall nbname
+uv pip uninstall nbname
 ```
 
 ## Contributing
@@ -39,9 +39,9 @@ The `jlpm` command is JupyterLab's pinned version of
 # Change directory to the nbname directory
 
 # Set up a virtual environment and install package in development mode
-python -m venv .venv
+uv venv --seed
 source .venv/bin/activate
-pip install --editable "."
+uv sync
 
 # Link your development version of the extension with JupyterLab
 jupyter labextension develop . --overwrite
@@ -49,16 +49,16 @@ jupyter labextension develop . --overwrite
 # Rebuild extension Typescript source after making changes
 # IMPORTANT: Unlike the steps above which are performed only once, do this step
 # every time you make a change.
-jlpm build
+uv run jlpm run build
 ```
 
 You can watch the source directory and run JupyterLab at the same time in different terminals to watch for changes in the extension's source and automatically rebuild the extension.
 
 ```bash
 # Watch the source directory in one terminal, automatically rebuilding when needed
-jlpm watch
+uv run jlpm watch
 # Run JupyterLab in another terminal
-jupyter lab
+uv run jupyter lab
 ```
 
 With the watch command running, every saved change will immediately be built locally and available in your running JupyterLab. Refresh JupyterLab to load the change in your browser (you may need to wait several seconds for the extension to be rebuilt).
